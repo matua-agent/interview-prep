@@ -4,6 +4,8 @@ AI-powered interview prep tool — paste any job description, get 12–15 tailor
 
 **Built for:** Harrison Dudley-Rode's active job search (Feb 2026)
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmatua-agent%2Finterview-prep&env=ANTHROPIC_API_KEY&envDescription=Your%20Anthropic%20API%20key%20(Claude)&envLink=https%3A%2F%2Fconsole.anthropic.com%2Faccount%2Fkeys&project-name=interview-prep&repository-name=interview-prep)
+
 ## What it does
 
 1. Paste a job description + optional company name
