@@ -19,22 +19,34 @@ AI-powered interview prep tool — paste any job description, get 12–15 tailor
 
 ## Deploy
 
-### To Vercel (one-click)
+### Option A: Vercel (one-click)
 
-1. Import `matua-agent/interview-prep` on vercel.com
-2. Add environment variable:
-   ```
-   ANTHROPIC_API_KEY=<your-key>
-   ```
-3. Deploy
+1. Go to vercel.com → Import → select `matua-agent/interview-prep`
+2. Add environment variable: `ANTHROPIC_API_KEY=<your-key>`
+3. Deploy — live URL in 30 seconds
 
-### Local dev
+### Option B: GitHub Actions (auto-deploy on push)
+
+The `.github/workflows/deploy.yml` workflow auto-deploys to Vercel on every push to main. To activate:
+
+1. Import repo on Vercel first (Option A above) to get the Project ID
+2. Add these GitHub repository secrets:
+   ```
+   VERCEL_TOKEN      → Get from vercel.com/account/tokens
+   VERCEL_ORG_ID     → Your Vercel team/personal account ID
+   VERCEL_PROJECT_ID → The project ID from Vercel dashboard
+   ANTHROPIC_API_KEY → Your Anthropic key
+   ```
+3. Push to main — CI builds then deploys automatically
+
+### Option C: Local dev
 
 ```bash
 cp .env.example .env.local
 # Add ANTHROPIC_API_KEY to .env.local
 npm install
 npm run dev
+# Open http://localhost:3000
 ```
 
 ## Stack
